@@ -1,5 +1,7 @@
 package com.example.mycalculator
 // Level 1
+// 더하기, 빼기, 나누기, 곱하기 연산 수행하기
+
 class Calculator {
     var number1 = 4
     var operator = "*"
