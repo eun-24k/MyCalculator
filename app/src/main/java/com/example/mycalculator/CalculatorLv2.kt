@@ -1,4 +1,6 @@
 package com.example.mycalculator
+// Level 2
+// 더하기, 빼기, 나누기, 곱하기 연산 수행하기
 fun main(){
     print("Type the equation without space: ")
     val stringInput = readLine()!!
@@ -21,6 +23,5 @@ fun main(){
         }
     }
     println("Result of the Calculation is $finalResult")
-
 }
 
