@@ -32,19 +32,15 @@ fun main() {
 class AddOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
     override fun operation(number1: Double, number2: Double): Double = number1 + number2
 }
-
 class SubtractOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
     override fun operation(number1: Double, number2: Double): Double = number1 - number2
 }
-
 class MultiplyOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
     override fun operation(number1: Double, number2: Double): Double = number1 * number2
 }
-
 class DivideOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
     override fun operation(number1: Double, number2: Double): Double = number1 / number2
 }
-
 abstract class abstractOperation(val number1: Double, val number2: Double) {
     abstract fun operation(number1: Double, number2: Double): Double
 }
