@@ -15,32 +15,26 @@ fun main() {
     var number2 = readLine()!!.toDouble()
 
 
-    // 객체 인스턴스화해주기
-    var addOperation = AddOperation(number1, number2)
-    var subtractOperation = SubtractOperation(number1, number2)
-    var multiplyOperation = MultiplyOperation(number1, number2)
-    var divideOperation = DivideOperation(number1, number2)
-
     when (operator) {
-        in "+" -> println(addOperation.operation(number1, number2))
-        in "-" -> println(subtractOperation.operation(number1, number2))
-        in "/" -> println(divideOperation.operation(number1, number2))
-        in "*" -> println(multiplyOperation.operation(number1, number2))
+        in "+" -> println(AddOperation(number1, number2).operation())
+        in "-" -> println(SubtractOperation(number1, number2).operation())
+        in "/" -> println(DivideOperation(number1, number2).operation())
+        in "*" -> println(MultiplyOperation(number1, number2).operation())
     }
 }
 
-class AddOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
-    override fun operation(number1: Double, number2: Double): Double = number1 + number2
+class AddOperation(number1: Double, number2: Double) : AbstractOperation(number1, number2) {
+    override fun operation(): Double = number1 + number2
 }
-class SubtractOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
-    override fun operation(number1: Double, number2: Double): Double = number1 - number2
+class SubtractOperation(number1: Double, number2: Double) : AbstractOperation(number1, number2) {
+    override fun operation(): Double = number1 - number2
 }
-class MultiplyOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
-    override fun operation(number1: Double, number2: Double): Double = number1 * number2
+class MultiplyOperation(number1: Double, number2: Double) : AbstractOperation(number1, number2) {
+    override fun operation(): Double = number1 * number2
 }
-class DivideOperation(number1: Double, number2: Double) : abstractOperation(number1, number2) {
-    override fun operation(number1: Double, number2: Double): Double = number1 / number2
+class DivideOperation(number1: Double, number2: Double) : AbstractOperation(number1, number2) {
+    override fun operation(): Double = number1 / number2
 }
-abstract class abstractOperation(val number1: Double, val number2: Double) {
-    abstract fun operation(number1: Double, number2: Double): Double
+abstract class AbstractOperation(val number1: Double, val number2: Double) {
+    abstract fun operation(): Double
 }
