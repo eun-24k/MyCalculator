@@ -8,11 +8,11 @@ package com.example.mycalculator
 fun main() {
     // 입력 값
     print("숫자를 입력하세요 : ")
-    var number1 = readLine()!!.toDouble()
+    val number1 = readLine()!!.toDouble()
     print("연산자를 입력하세요 : ")
-    var operator = readLine()!!
+    val operator = readLine()!!
     print("숫자를 입력하세요 : ")
-    var number2 = readLine()!!.toDouble()
+    val number2 = readLine()!!.toDouble()
 
 
     when (operator) {
